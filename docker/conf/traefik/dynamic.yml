@@ -1,0 +1,4 @@
+tls:
+  certificates:
+    - certFile: "/etc/certs/mkcert.pem"
+      keyFile: "/etc/certs/mkcert.key"
