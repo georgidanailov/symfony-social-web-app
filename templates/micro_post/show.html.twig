@@ -9,7 +9,7 @@
 {% block body %}
     <div class="flex items-center mb-4">
         <div>
-            {{ include('shared/_avatar.html.twig', { profile: post.author.userProfile, size: 16 }) }}
+            {{ include('shared/_avatar.html.twig', {'size': 128, profile: app.user.userProfile}) }}
         </div>
         <div class="ml-4">
             <div class="text-xl">
@@ -30,7 +30,7 @@
             <div>
                 <div class="flex items-center">
                     <div class="mr-2">
-                        {{ include('shared/_avatar.html.twig', { profile: comment.author.userProfile, size: 8 }) }}
+                        {{ include('shared/_avatar.html.twig', {'size': 8, profile: app.user.userProfile}) }}
                     </div>
                     <div>
                         <div class="font-medium text-gray-800 dark:text-gray-300">

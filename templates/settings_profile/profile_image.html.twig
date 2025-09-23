@@ -10,7 +10,7 @@
     {{ include('settings_profile/_settings_profile_tabs.html.twig') }}
 
     <div class="flex items-center">
-        {{ include('shared/_avatar.html.twig', {'size': 32, profile: app.user.userProfile}) }}
+        {{ include('shared/_avatar.html.twig', {'size': 256, profile: app.user.userProfile}) }}
 
         <div class="ml-16">
             {{ form_start(form, {'attr': {'novalidate': 'novalidate'} }) }}
