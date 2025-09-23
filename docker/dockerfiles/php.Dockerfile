@@ -1,4 +1,4 @@
-FROM ediormbg/devops-php:dev838
+FROM ediormbg/devops-php:dev8410
 
 ARG UID
 ARG GID
