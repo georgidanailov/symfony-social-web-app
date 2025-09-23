@@ -15,16 +15,6 @@ liip_imagine:
         strip: ~
       format: jpeg
 
-    avatar_small:
-      quality: 90
-      filters:
-        auto_rotate: ~
-        fixed:
-          width: 64
-          height: 64
-        strip: ~
-      format: jpeg
-
     avatar_medium:
       quality: 90
       filters:
