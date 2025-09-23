@@ -1,6 +1,11 @@
-{% if profile and profile.image %}
-    <img src="{{ profiles ~ profile.image }}"
-         class="inline-block h-{{size}} w-{{size}} rounded-full ring-2 ring-white dark:ring-gray-600" />
+{% if profile and profile.imageName %}
+    <img src="{{ vich_uploader_asset(profile, 'imageFile') }}"
+         class="inline-block h-{{ size }} w-{{ size }} rounded-full {{ class|default('') }}"
+         alt="User Avatar" />
 {% else %}
-    <div class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full text-3xl h-{{size}} w-{{size}} ring-2 ring-white dark:ring-gray-600"></div>
+    <div class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full text-3xl h-{{ size }} w-{{ size }} {{ class|default('') }} flex items-center justify-center">
+        <span class="text-gray-500 dark:text-gray-400 text-sm">
+            {{ app.user.email|first|upper }}
+        </span>
+    </div>
 {% endif %}
